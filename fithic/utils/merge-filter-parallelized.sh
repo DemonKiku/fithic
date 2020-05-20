@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #DESCRIPTION:
-#bash merge-filter_parallelized.sh [inputFile] [resolution] [outputDirectory] [fdr]
+#bash merge-filter_parallelized.sh [inputFile] [resolution] [outputDirectory] [fdr] [utilityfolder]
 #        
 #        [inputFile]                Input file of Fit-Hi-C significant interactions
 #        [resolution]               Resolution used

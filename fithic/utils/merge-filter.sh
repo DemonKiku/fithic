@@ -16,7 +16,7 @@ fdr=$4
 utilityfolder=$5
 
 JOBHEADER_FILE="~/bin/jobHeader"
-script=""$UTILITYFOLDER"CombineNearbyInteraction.py"
+script=""$utilityfolder"CombineNearbyInteraction.py"
 outdir=$(dirname "${outputFile}")
 mkdir -p $outdir
 zcat $inputFile | awk '{if(NR!=1){print $0}}'| awk -v q="$fdr" '{if($7<=q){print $0}}' | gzip > $outdir/fithic_subset.gz

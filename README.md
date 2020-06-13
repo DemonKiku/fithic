@@ -383,6 +383,8 @@ HiCKRy is an in-house version of Hi-C contact map normalization using the Knight
 ```
 It then outputs a bias file in the format of Fit-Hi-C's `-t` input option.
 
+NOTE: one should always check the output of the bias file for correctness. If one finds a large number of `-1` values or exceedingly small values then it is likely that the KR algorithm failed to converge. To rectify this we recommend rerunning HiCKRy with a different value in `-x`. This is similar to the approach employed by the Aiden lab in Juicebox [see here](https://github.com/aidenlab/Juicebox/blob/2de0cae629164993479fdae7d38075791141a9a2/src/juicebox/tools/utils/norm/NormalizationCalculations.java#L437). In the future, we might make this step automatically rerun until it converges. Until then, *please check output*!
+
 ### HiCPro2FitHiC
 HiC-Pro is a common Hi-C mapping tool used to extract information from the raw reads after the Hi-C assay is run. The following script enables the generation of Fit-Hi-C input directly from HiC-Pro's output.
 
